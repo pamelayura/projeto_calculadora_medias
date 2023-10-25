@@ -49,8 +49,7 @@ function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
     document.getElementById('media-final-valor').innerHTML = mediaFinal;
-    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? 'Aprovado' : 'Reprovado';
-
+    document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado;
 }
 
 function calculaMediaFinal() {
@@ -60,6 +59,5 @@ function calculaMediaFinal() {
         somaDasNotas += notas[i]; 
     }
 
-    return somaDasNotas / notas.length;
-    
+    return somaDasNotas / notas.length; 
 }
